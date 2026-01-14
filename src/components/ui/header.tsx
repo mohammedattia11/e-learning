@@ -9,6 +9,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import HeaderButtonsGroup from "../header-buttons-group";
 
 const courses = [
   {
@@ -71,7 +72,7 @@ export default function Header() {
   return (
     <header className="absolute bg-black top-0 left-0 w-full z-50 p-4 flex justify-between items-center">
       <div className="flex gap-2 items-center">
-        <Image src="/crown.png" alt="crown logo" width={40} height={40} />
+        <Image src="/logo.png" alt="crown logo" width={40} height={40} />
         <h2 className="font-bold text-3xl font-game">CodeBox</h2>
       </div>
       <nav>
@@ -113,9 +114,7 @@ export default function Header() {
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
-      <Button className="font-game text-2xl" variant={"pixel"}>
-        Signup
-      </Button>
+      <HeaderButtonsGroup/>
     </header>
   );
 }

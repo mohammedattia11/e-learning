@@ -10,6 +10,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@clerk/elements": "^0.24.3",
+    "@clerk/nextjs": "^6.36.7",
     "@radix-ui/react-navigation-menu": "^1.2.14",
     "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
