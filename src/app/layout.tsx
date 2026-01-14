@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Jersey_10 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
-
+import { ClerkProvider } from "@clerk/nextjs";
 const gameFont = Jersey_10({
   subsets: ["latin"],
   variable: "--font-game",
-  weight: ["400"]
+  weight: ["400"],
 });
 
 const inter = Inter({
@@ -16,13 +16,13 @@ const inter = Inter({
 
 const geistSans = Geist({
   subsets: ["latin"],
-  variable: "--font-geistSans"
-})
+  variable: "--font-geistSans",
+});
 
 const geistMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-geistMono"
-})
+  variable: "--font-geistMono",
+});
 
 export const metadata: Metadata = {
   title: "e-leaning",
@@ -35,18 +35,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head className="dark" />
-      <body className={`${gameFont.variable} ${geistMono.variable} ${geistSans.variable} ${inter.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
+    <ClerkProvider>
+      <html lang="en" suppressHydrationWarning>
+        <head className="dark" />
+        <body
+          className={`${gameFont.variable} ${geistMono.variable} ${geistSans.variable} ${inter.variable} antialiased`}
         >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
