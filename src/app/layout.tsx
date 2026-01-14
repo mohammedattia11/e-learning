@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Jersey_10 } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/providers/theme-provider";
+import { Providers } from "@/providers";
 import { ClerkProvider } from "@clerk/nextjs";
 const gameFont = Jersey_10({
   subsets: ["latin"],
@@ -41,14 +41,14 @@ export default function RootLayout({
         <body
           className={`${gameFont.variable} ${geistMono.variable} ${geistSans.variable} ${inter.variable} antialiased`}
         >
-          <ThemeProvider
+          <Providers
             attribute="class"
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
             {children}
-          </ThemeProvider>
+          </Providers>
         </body>
       </html>
     </ClerkProvider>
