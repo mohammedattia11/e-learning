@@ -1,17 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, Pixelify_Sans } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Jersey_10 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 
-const gameFont = Pixelify_Sans({
+const gameFont = Jersey_10({
   subsets: ["latin"],
-  variable: "--font-gameFont",
+  variable: "--font-game",
+  weight: ["400"]
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
+
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geistSans"
+})
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geistMono"
+})
 
 export const metadata: Metadata = {
   title: "e-leaning",
@@ -25,8 +36,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
-      <body className="dark">
+      <head className="dark" />
+      <body className={`${gameFont.variable} ${geistMono.variable} ${geistSans.variable} ${inter.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

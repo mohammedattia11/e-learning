@@ -1,8 +1,11 @@
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import Header from "@/components/ui/header";
+import Hero from "@/components/ui/hero";
 
 export default function Home() {
   return (
-    <Button>Click me</Button>
+    <div className="relative h-screen">
+      <Header />
+      <Hero/>
+    </div>
   );
 }
