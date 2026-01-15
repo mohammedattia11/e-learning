@@ -70,7 +70,7 @@ const courses = [
 
 export default function Header() {
   return (
-    <header className="absolute bg-black top-0 left-0 w-full z-50 p-4 flex justify-between items-center">
+    <header className="bg-black w-full p-4 flex justify-between items-center">
       <div className="flex gap-2 items-center">
         <Image src="/logo.png" alt="crown logo" width={40} height={40} />
         <h2 className="font-bold text-3xl font-game">CodeBox</h2>
@@ -114,7 +114,7 @@ export default function Header() {
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
-      <HeaderButtonsGroup/>
+      <HeaderButtonsGroup />
     </header>
   );
 }
