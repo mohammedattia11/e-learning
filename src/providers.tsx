@@ -6,6 +6,7 @@ import { useUser } from "@clerk/nextjs";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { UserContext } from "./context/user-context";
+import Header from "./components/ui/header";
 
 export function Providers({
   children,
@@ -16,7 +17,7 @@ export function Providers({
 
   async function createUser() {
     const result = await axios.post("/api/user", {});
-    setUserDetails(result?.data)
+    setUserDetails(result?.data);
   }
 
   useEffect(() => {
@@ -28,7 +29,10 @@ export function Providers({
 
   return (
     <UserContext.Provider value={{ userDetails, setUserDetails }}>
-      <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+      <NextThemesProvider {...props}>
+        <Header />
+        {children}
+      </NextThemesProvider>
     </UserContext.Provider>
   );
 }
