@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function EnrolledCourses() {
   const [enrolledCourses, setEnrolledCourses] = useState([]);
@@ -16,13 +17,15 @@ export default function EnrolledCourses() {
           <h2 className="capitalize font-game text-xl">
             you don&apos;t have any enrolled courses
           </h2>
-          <Button
-            className="capitalize text-lg"
-            variant={"pixel"}
-            size={"lg"}
-          >
-            browse all courses
-          </Button>
+          <Link href="/courses">
+            <Button
+              className="capitalize text-lg"
+              variant={"pixel"}
+              size={"lg"}
+            >
+              browse all courses
+            </Button>
+          </Link>
         </div>
       ) : (
         <div>List</div>

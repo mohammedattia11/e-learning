@@ -71,10 +71,10 @@ const courses = [
 export default function Header() {
   return (
     <header className="bg-black w-full p-4 flex justify-between items-center">
-      <div className="flex gap-2 items-center">
+      <Link href="/" className="flex gap-2 items-center">
         <Image src="/logo.png" alt="crown logo" width={40} height={40} />
         <h2 className="font-bold text-3xl font-game">CodeBox</h2>
-      </div>
+      </Link>
       <nav>
         <NavigationMenu>
           <NavigationMenuList className="gap-8">
