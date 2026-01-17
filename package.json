@@ -8,6 +8,7 @@
     "start": "bun --bun run next start",
     "preview": "bun --bun run next build && bun --bun run next start",
     "drizzle:studio": "bunx drizzle-kit studio",
+    "drizzle:push": "bunx drizzle-kit push",
     "lint": "eslint"
   },
   "dependencies": {
