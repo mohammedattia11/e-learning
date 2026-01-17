@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Button } from "./button";
-import Link from "next/link";
+import HeroNavigationButton from "../hero-nvigation-button";
 
 export default function Hero() {
   return (
@@ -22,14 +21,7 @@ export default function Hero() {
         <h3 className="mt-5 font-game text-3xl [text-shadow:2px_2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000]">
           Beginner friendly coding courses and projects
         </h3>
-        <Link href={"sign-in"}>
-          <Button
-            className="font-game text-3xl p-6 mt-7 uppercase cursor-pointer"
-            variant={"pixel"}
-          >
-            get started
-          </Button>
-        </Link>
+        <HeroNavigationButton />
       </div>
     </div>
   );

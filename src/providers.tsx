@@ -30,8 +30,10 @@ export function Providers({
   return (
     <UserContext.Provider value={{ userDetails, setUserDetails }}>
       <NextThemesProvider {...props}>
-        <Header />
-        {children}
+        <div className="h-screen flex flex-col">
+          <Header />
+          <div className="flex-1">{children}</div>
+        </div>
       </NextThemesProvider>
     </UserContext.Provider>
   );
