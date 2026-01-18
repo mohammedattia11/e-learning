@@ -6,7 +6,7 @@ export default function CoursesPage() {
     <div>
       <div className="relative">
         <Image
-          src="/course-banner.gif"
+          src="https://ik.imagekit.io/mattia1/public/course-banner.gif"
           alt="course-banner"
           width={1200}
           height={300}

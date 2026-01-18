@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Button } from "./button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -72,7 +71,7 @@ export default function Header() {
   return (
     <header className="bg-black w-full p-4 flex justify-between items-center">
       <Link href="/" className="flex gap-2 items-center">
-        <Image src="/logo.png" alt="crown logo" width={40} height={40} />
+        <Image src="https://ik.imagekit.io/mattia1/public/logo.png" alt="crown logo" width={40} height={40} />
         <h2 className="font-bold text-3xl font-game">CodeBox</h2>
       </Link>
       <nav>

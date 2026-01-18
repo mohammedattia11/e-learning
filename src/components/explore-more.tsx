@@ -5,25 +5,25 @@ const ExplorMoreOptions = [
     id: 1,
     title: "Quizz Pack",
     desc: "Practice what you learned with bite-sized code challenges.",
-    icon: "/tree.png",
+    icon: "https://ik.imagekit.io/mattia1/public/tree.png",
   },
   {
     id: 2,
     title: "Video Courses",
     desc: "Learn with structured video lessons taught step-by-step.",
-    icon: "/game.png",
+    icon: "https://ik.imagekit.io/mattia1/public/game.png",
   },
   {
     id: 3,
     title: "Community Project",
     desc: "Build real-world apps by collaborating with the community.",
-    icon: "/growth.png",
+    icon: "https://ik.imagekit.io/mattia1/public/growth.png",
   },
   {
     id: 4,
     title: "Talk with AI",
     desc: "Chat with AI to get help, explanations, and debugging tips.",
-    icon: "/start-up.png",
+    icon: "https://ik.imagekit.io/mattia1/public/start-up.png",
   },
 ];
 

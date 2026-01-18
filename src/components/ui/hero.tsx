@@ -4,7 +4,7 @@ import HeroNavigationButton from "../hero-nvigation-button";
 export default function Hero() {
   return (
     <div className="relative w-full h-full flex justify-center items-center">
-      <Image src="/hero.gif" alt="hero-image" fill className="object-cover" />
+      <Image src="https://ik.imagekit.io/mattia1/public/hero.gif" alt="hero-image" fill className="object-cover" />
 
       <div className="absolute w-full flex flex-col items-center mt-24">
         <h2 className="font-game text-7xl font-bold [text-shadow:2px_2px_0_#000,2px_-2px_0_#000,-2px_2px_0_#000]">

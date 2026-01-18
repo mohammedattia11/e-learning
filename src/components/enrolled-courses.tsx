@@ -13,7 +13,7 @@ export default function EnrolledCourses() {
       </h2>
       {enrolledCourses.length === 0 ? (
         <div className="flex flex-col items-center gap-3 p-7 border rounded-2xl bg-zinc-900">
-          <Image src="/books.png" alt="books" width={90} height={90} />
+          <Image src="https://ik.imagekit.io/mattia1/public/books.png" alt="books" width={90} height={90} />
           <h2 className="capitalize font-game text-xl">
             you don&apos;t have any enrolled courses
           </h2>

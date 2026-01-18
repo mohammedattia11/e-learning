@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export default function InviteFriend() {
   return (
     <div className="flex flex-col items-center mt-8 p-4 border rounded-xl bg-zinc-900">
-      <Image src="/mail.png" alt="mail-icon" width={80} height={80} />
+      <Image src="https://ik.imagekit.io/mattia1/public/mail.png" alt="mail-icon" width={80} height={80} />
       <h2 className="capitalize text-3xl font-game">invite friend</h2>
       <p className="capitalize font-game text-gray-400">
         Having fun? share the love with a friend! enter and email and we will

@@ -7,7 +7,7 @@ export function WelcomeBanner() {
   return (
     <div className="flex gap-3 items-center">
       <Image
-        src={"/machine.webp"}
+        src="https://ik.imagekit.io/mattia1/public/machine.webp"
         alt="machine-banner"
         width={120}
         height={120}
